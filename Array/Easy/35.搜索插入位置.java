@@ -1,12 +1,5 @@
-/*
- * @lc app=leetcode.cn id=35 lang=java
- *
- * [35] 搜索插入位置
- */
-
-// @lc code=start
 class Solution {
-    // 暴力解法
+    // 解法一：暴力解法
     public int searchInsert1(int[] nums, int target) {
         // 目标值在数组所有元素之前
         if (target <= nums[0]) {
@@ -27,7 +20,7 @@ class Solution {
         return nums.length;
     }
 
-    // 二分法
+    // 解法二：二分法
     public int searchInsert2(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
@@ -46,4 +39,3 @@ class Solution {
     }
 
 }
-// @lc code=end
