@@ -1,5 +1,21 @@
 import java.util.*;
 
+/*
+ * @lc app=leetcode.cn id=1 lang=java
+ *
+ * [1] 两数之和
+ */
+
+class Main {
+    public static void main(String[] args) {
+        Solution1 solution = new Solution1();
+        int[] nums = { 2, 7, 11, 15 };
+        System.out.println("jjjasklfjas");
+        int[] result = solution.twoSum(nums, 9);
+        System.out.println(result);
+    }
+}
+
 /**
  * 解题思路如下：
  * 1.先对输入数组按照区间左边的值进行升序排列
@@ -12,6 +28,7 @@ import java.util.*;
  * 4.将 result 转成数组，并返回
  */
 
+// @lc code=start
 class Solution {
     public int[][] merge(int[][] intervals) {
         LinkedList<int[]> result = new LinkedList<>();
@@ -33,3 +50,4 @@ class Solution {
         return result.toArray(new int[result.size()][]);
     }
 }
+// @lc code=end

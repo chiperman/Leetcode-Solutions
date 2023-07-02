@@ -1,3 +1,10 @@
+/*
+ * @lc app=leetcode.cn id=35 lang=java
+ *
+ * [35] 搜索插入位置
+ */
+
+// @lc code=start
 class Solution {
     // 解法一：暴力解法
     public int searchInsert1(int[] nums, int target) {
@@ -39,3 +46,4 @@ class Solution {
     }
 
 }
+// @lc code=end

@@ -1,3 +1,11 @@
+/*
+ * @lc app=leetcode.cn id=1991 lang=java
+ *
+ * [1991] 找到数组的中间位置
+ */
+
+// @lc code=start
+
 class Solution {
     public int findMiddleIndex(int[] nums) {
         int leftSum = 0;
@@ -17,3 +25,4 @@ class Solution {
         return -1;
     }
 }
+// @lc code=end
