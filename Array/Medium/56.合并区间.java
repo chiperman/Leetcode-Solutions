@@ -8,11 +8,9 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        Solution1 solution = new Solution1();
-        int[] nums = { 2, 7, 11, 15 };
-        System.out.println("jjjasklfjas");
-        int[] result = solution.twoSum(nums, 9);
-        System.out.println(result);
+        Solution solution = new Solution();
+        int[][] intervals = { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } };
+        solution.merge(intervals);
     }
 }
 
