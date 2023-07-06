@@ -1,3 +1,10 @@
+/*
+ * @lc app=leetcode.cn id=83 lang=java
+ *
+ * [83] 删除排序链表中的重复元素
+ */
+
+// @lc code=start
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -64,3 +71,4 @@ class Solution {
         return head;
     }
 }
+// @lc code=end
