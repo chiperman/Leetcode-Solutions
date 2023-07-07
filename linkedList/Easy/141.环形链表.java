@@ -19,7 +19,7 @@ import java.util.List;
  *     }
  * }
  */
-public class Solution {
+class Solution {
 
     // 快慢指针法
     public boolean hasCycle2(ListNode head) {
@@ -40,14 +40,12 @@ public class Solution {
         return false;
     }
 
-    
     // 哈希表
     public boolean hasCycle2(ListNode head) {
         Set<ListNode> set = new HashSet<>();
         ListNode cur = head;
 
         while (cur != null) {
-            cur = cur.next;
             if (set.contains(cur)) {
                 return true;
             }
