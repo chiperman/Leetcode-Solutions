@@ -17,9 +17,9 @@
  */
 class Solution {
     public ListNode partition(ListNode head, int x) {
-        ListNode list1 = new ListNode();
+        ListNode list1 = new ListNode(-1);
         ListNode cur1 = list1;
-        ListNode list2 = new ListNode();
+        ListNode list2 = new ListNode(-1);
         ListNode cur2 = list2;
 
         while (head != null) {

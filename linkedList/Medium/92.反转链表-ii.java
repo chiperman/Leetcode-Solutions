@@ -59,7 +59,7 @@ class Solution {
     }
 
     public ListNode reverseBetween2(ListNode head, int left, int right) {
-        ListNode dummy = new ListNode();
+        ListNode dummy = new ListNode(-1);
         dummy.next = head;
         ListNode pre = dummy;
 

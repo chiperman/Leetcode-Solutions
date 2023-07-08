@@ -27,7 +27,7 @@ class Solution {
         }
 
         // 增加一个假头节点
-        ListNode newHead = new ListNode(1);
+        ListNode newHead = new ListNode(-1);
         newHead.next = head;
 
         ListNode pre = newHead;
@@ -58,7 +58,7 @@ class Solution {
         }
 
         // 增加一个假头节点
-        ListNode newHead = new ListNode(1);
+        ListNode newHead = new ListNode(-1);
         newHead.next = head;
 
         ListNode pre = newHead;
