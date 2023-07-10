@@ -14,7 +14,6 @@ class Main {
 
 // @lc code=start
 class Solution {
-
     public int removeDuplicates(int[] nums) {
         int lPoint = 0;
         int rPoint = 1;
