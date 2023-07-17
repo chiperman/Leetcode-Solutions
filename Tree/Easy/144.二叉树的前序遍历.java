@@ -39,4 +39,23 @@ class Solution {
 
     }
 }
+
+class Solution2 {
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        LinkedList<TreeNode> stack = new LinkedList<TreeNode>();
+
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                res.add(root.val);
+                root = root.left;
+
+            }
+            root = stack.pop();
+            root = root.right;
+        }
+        return res;
+    }
+}
 // @lc code=end
