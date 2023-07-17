@@ -17,7 +17,7 @@
  */
 class Solution {
     // 迭代
-    public ListNode1 reverseList(ListNode head) {
+    public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
@@ -36,9 +36,11 @@ class Solution {
         head = newHead; // 把原来的链表的头节点改成新的链表的头节点
         return head; // 返回反转后的头节点
     }
+}
 
-    // 递归*
-    public ListNode2 reverseList(ListNode head) {
+class Solution2 {
+    // 递归
+    public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }

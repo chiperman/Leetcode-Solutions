@@ -16,8 +16,8 @@
  *     }
  * }
  */
-public class Solution {
-    public ListNode detectCycle1(ListNode head) {
+class Solution {
+    public ListNode detectCycle(ListNode head) {
         Set<ListNode> hashSet = new HashSet<>();
         ListNode cur = head;
         while (cur != null) {
@@ -30,8 +30,10 @@ public class Solution {
         }
         return null;
     }
+}
 
-    public ListNode detectCycle2(ListNode head) {
+class Solution2 {
+    public ListNode detectCycle(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
         while (fast != null && fast.next != null) {

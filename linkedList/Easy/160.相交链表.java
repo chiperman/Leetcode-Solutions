@@ -24,7 +24,7 @@ public class Solution {
     /*
      * 使用栈，可以优化为哈希表
      */
-    public ListNode getIntersectionNode1(ListNode headA, ListNode headB) {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         Stack<ListNode> stackA = new Stack<>();
         Stack<ListNode> stackB = new Stack<>();
 
@@ -52,11 +52,13 @@ public class Solution {
 
         return answer;
     }
+}
 
+class Solution2 {
     /**
      * 双指针
      */
-    public ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode A = headA;
         ListNode B = headB;
 

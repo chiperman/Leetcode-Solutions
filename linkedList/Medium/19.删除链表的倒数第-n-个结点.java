@@ -16,7 +16,7 @@
  * }
  */
 class Solution {
-    public ListNode removeNthFromEnd1(ListNode head, int n) {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
 
@@ -36,10 +36,11 @@ class Solution {
         cur.next = cur.next.next;
 
         return dummy.next;
-
     }
+}
 
-    public ListNode removeNthFromEnd2(ListNode head, int n) {
+class Solution2 {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
         // 慢指针初始指向虚拟头结点

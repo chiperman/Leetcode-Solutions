@@ -26,7 +26,9 @@ class Solution {
         // 目标值在数组所有元素之后的情况 
         return nums.length;
     }
+}
 
+class Solution2 {
     // 解法二：二分法
     public int searchInsert2(int[] nums, int target) {
         int left = 0;
@@ -44,6 +46,5 @@ class Solution {
         }
         return left;
     }
-
 }
 // @lc code=end

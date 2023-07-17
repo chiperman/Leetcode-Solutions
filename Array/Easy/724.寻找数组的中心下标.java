@@ -7,14 +7,6 @@
 
 // @lc code=start
 class Solution {
-    public static void main(String[] args) {
-        int[] nums = { 1, 7, 3, 6, 5, 6 };
-        Solution solution = new Solution();
-        solution.pivotIndex1(nums);
-        solution.pivotIndex2(nums);
-        solution.pivotIndex3(nums);
-    }
-
     /**
      * 解法一：
      * 循环遍历数组，分别计算中心下标的左侧总和 `leftSum` 和右侧总和 `rightSum` ，
@@ -23,7 +15,7 @@ class Solution {
      * 
      * 缺点：实际复杂度高，两次循环遍历
      */
-    public int pivotIndex2(int[] nums) {
+    public int pivotIndex(int[] nums) {
         int leftSum = 0;
         int rightSum = 0;
         int middle = 0;
@@ -46,12 +38,14 @@ class Solution {
 
         return -1;
     }
+}
 
+class Solution2 {
     /**
      * 解法二
      * 左侧总和 * 2 + 中心下表数据 = 总和
      */
-    public int pivotIndex1(int[] nums) {
+    public int pivotIndex(int[] nums) {
         int total = 0;
         int leftSum = 0;
         for (int num : nums) {
@@ -66,11 +60,13 @@ class Solution {
         }
         return -1;
     }
+}
 
+class Solution3 {
     /*
      * 解法三
      */
-    public int pivotIndex3(int[] nums) {
+    public int pivotIndex(int[] nums) {
         // 左侧总和 * 2 + 中心下表数据 = 总和
         int total = 0;
         int leftSum = 0;
@@ -90,7 +86,6 @@ class Solution {
         }
         return -1;
     }
-
 }
 // @lc code=end
 

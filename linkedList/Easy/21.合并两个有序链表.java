@@ -16,7 +16,7 @@
  * }
  */
 class Solution {
-    public ListNode mergeTwoLists1(ListNode list1, ListNode list2) {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(-1);
         ListNode cur = dummy;
 
@@ -38,8 +38,10 @@ class Solution {
 
         return dummy.next;
     }
-    
-    public ListNode mergeTwoLists2(ListNode list1, ListNode list2) {
+}
+
+class Solution2 {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
         if (list1 == null) {
             return list2;

@@ -19,7 +19,7 @@ import java.util.LinkedList;
  * }
  */
 class Solution {
-    public boolean isPalindrome1(ListNode head) {
+    public boolean isPalindrome(ListNode head) {
 
         if (head == null || head.next == null) {
             return true;
@@ -58,8 +58,10 @@ class Solution {
         }
         return stack.isEmpty(); // 栈应该为空才是回文链表
     }
+}
 
-    public boolean isPalindrome2(ListNode head) {
+class Solution2 {
+    public boolean isPalindrome(ListNode head) {
         List<Integer> vals = new ArrayList<Integer>();
 
         ListNode cur = head;

@@ -35,7 +35,7 @@ class Solution {
      * 5. 遍历完成后，断开与后面重复元素的连接，将慢指针的**`next`**设置为**`null`**。
      * 6. 返回头节点。
      */
-    public ListNode1 deleteDuplicates1(ListNode head) {
+    public ListNode1 deleteDuplicates(ListNode head) {
         if (head == null) {
             return null;
         }
@@ -55,11 +55,13 @@ class Solution {
         slow.next = null;
         return head;
     }
+}
 
+class Solution2 {
     /**
-     * 只需要遍历一次即可，如果 cur.val == cur.next.val（当前节点的值等于当前节点下一个节点的值），就让当前节点指向下下一个节点
-     */
-    public ListNode2 deleteDuplicates2(ListNode head) {
+    * 只需要遍历一次即可，如果 cur.val == cur.next.val（当前节点的值等于当前节点下一个节点的值），就让当前节点指向下下一个节点
+    */
+    public ListNode2 deleteDuplicates(ListNode head) {
         ListNode cur = head;
         while (cur != null && cur.next != null) {
             if (cur.val == cur.next.val) {

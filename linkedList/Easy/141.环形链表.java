@@ -20,9 +20,8 @@ import java.util.List;
  * }
  */
 class Solution {
-
     // 快慢指针法
-    public boolean hasCycle2(ListNode head) {
+    public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {
             return false;
         }
@@ -39,9 +38,11 @@ class Solution {
         }
         return false;
     }
+}
 
+class Solution2 {
     // 哈希表
-    public boolean hasCycle2(ListNode head) {
+    public boolean hasCycle(ListNode head) {
         Set<ListNode> set = new HashSet<>();
         ListNode cur = head;
 

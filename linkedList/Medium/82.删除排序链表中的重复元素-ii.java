@@ -21,7 +21,7 @@ class Solution {
      * 增加一个假的头节点连在 `head` 的头节点前面，最后返回 `newHead.next`
      * 然后用两个指针 cur 和 pre 分别指向前后两个节点，比较 `cur.next.val` 和 `pre.next.val` 的值，然后进行前进
      */
-    public ListNode1 deleteDuplicates(ListNode head) {
+    public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
@@ -47,12 +47,15 @@ class Solution {
         }
         return newHead.next;
     }
+}
 
+
+class Solution2 {
     /**
-     * 还是要增加假头节点，和解法一不同点在于
-     * 比较的的是：`cur.val` 和 `pre.next.val` 的值
-     */
-    public ListNode2 deleteDuplicates(ListNode head) {
+    * 还是要增加假头节点，和解法一不同点在于
+    * 比较的的是：`cur.val` 和 `pre.next.val` 的值
+    */
+    public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }

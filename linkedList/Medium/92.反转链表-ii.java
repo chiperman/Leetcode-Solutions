@@ -17,7 +17,7 @@
  */
 
 class Solution {
-    public ListNode reverseBetween1(ListNode head, int left, int right) {
+    public ListNode reverseBetween(ListNode head, int left, int right) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode pre = dummy;
@@ -57,8 +57,10 @@ class Solution {
         return dummy.next;
 
     }
+}
 
-    public ListNode reverseBetween2(ListNode head, int left, int right) {
+class Solution2 {
+    public ListNode reverseBetween(ListNode head, int left, int right) {
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
         ListNode pre = dummy;
