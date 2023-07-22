@@ -1,0 +1,57 @@
+/*
+ * @lc app=leetcode.cn id=107 lang=java
+ *
+ * [107] 二叉树的层序遍历 II
+ */
+
+// @lc code=start
+
+import java.util.ArrayDeque;
+import java.util.LinkedList;
+import java.util.Queue;
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        List<List<Integer>> result = new LinkedList<List<Integer>>();
+        if (root == null) {
+            return result;
+        }
+
+        Queue<TreeNode> queue = new ArrayDeque<>();
+
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            List<Integer> tempList = new LinkedList<>();
+            for (int i = 0; i < size; i++) {
+                TreeNode currentNode = queue.poll();
+                tempList.add(currentNode.val);
+                if (currentNode.left != null) {
+                    queue.add(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    queue.add(currentNode.right);
+                }
+            }
+            result.add(0, tempList);
+        }
+        return result;
+    }
+}
+// @lc code=end
