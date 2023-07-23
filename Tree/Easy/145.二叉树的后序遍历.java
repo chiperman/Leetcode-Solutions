@@ -28,6 +28,7 @@ import javax.swing.plaf.basic.BasicTreeUI.TreeCancelEditingAction;
  */
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
+        // 左右根
         List<Integer> res = new ArrayList<>();
         postorder(root, res);
         return res;

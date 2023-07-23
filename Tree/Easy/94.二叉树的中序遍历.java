@@ -24,7 +24,6 @@ import java.util.List;
  * }
  */
 class Solution1 {
-    // 递归
     public List<Integer> inorderTraversal(TreeNode root) {
         // 左根右
         List<Integer> res = new ArrayList<Integer>();

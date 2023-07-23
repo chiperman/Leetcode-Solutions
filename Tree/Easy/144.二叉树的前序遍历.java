@@ -23,6 +23,7 @@
  */
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
+        // 根左右
         List<Integer> res = new ArrayList<>();
         preorder(root, res);
         return res;
@@ -50,7 +51,6 @@ class Solution2 {
                 stack.push(root);
                 res.add(root.val);
                 root = root.left;
-
             }
             root = stack.pop();
             root = root.right;
