@@ -31,7 +31,7 @@ class Solution {
             return result;
         }
 
-        queue.add(root);
+        queue.offer(root);
 
         while (!queue.isEmpty()) {
             int size = queue.size();
@@ -42,12 +42,12 @@ class Solution {
                 }
                 // 判断当前节点的左子节点是否有值，如果有，则添加到 queue 中
                 if (node.left != null) {
-                    queue.add(node.left);
+                    queue.offer(node.left);
                 }
 
                 // 判断当前节点的右子节点是否有值，如果有，则添加到 queue 中    
                 if (node.right != null) {
-                    queue.add(node.right);
+                    queue.offer(node.right);
                 }
             }
         }

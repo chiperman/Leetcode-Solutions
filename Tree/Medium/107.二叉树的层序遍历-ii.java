@@ -10,6 +10,8 @@ import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import javax.swing.tree.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -34,7 +36,7 @@ class Solution {
 
         Queue<TreeNode> queue = new ArrayDeque<>();
 
-        queue.add(root);
+        queue.offer(root);
 
         while (!queue.isEmpty()) {
             int size = queue.size();
@@ -43,10 +45,10 @@ class Solution {
                 TreeNode currentNode = queue.poll();
                 tempList.add(currentNode.val);
                 if (currentNode.left != null) {
-                    queue.add(currentNode.left);
+                    queue.offer(currentNode.left);
                 }
                 if (currentNode.right != null) {
-                    queue.add(currentNode.right);
+                    queue.offer(currentNode.right);
                 }
             }
             result.add(0, tempList);

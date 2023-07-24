@@ -27,6 +27,11 @@ class Node {
     }
 };
 */
+
+import java.util.Queue;
+
+import com.sun.org.apache.bcel.internal.classfile.Node;
+
 class Solution {
     public Node connect(Node root) {
         if (root == null) {
@@ -58,7 +63,7 @@ class Solution2 {
         }
 
         Queue<Node> queue = new LinkedList<>();
-        queue.add(root);
+        queue.offer(root);
 
         while (!queue.isEmpty()) {
             // 记录当前队列大小
@@ -74,10 +79,10 @@ class Solution2 {
 
                 // 拓展下一层节点
                 if (cur.left != null) {
-                    queue.add(cur.left);
+                    queue.offer(cur.left);
                 }
                 if (cur.right != null) {
-                    queue.add(cur.right);
+                    queue.offer(cur.right);
                 }
             }
         }
