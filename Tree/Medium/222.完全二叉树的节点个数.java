@@ -51,7 +51,7 @@ class Solution {
     }
 }
 
-class Solution {
+class Solution2 {
     public int countNodes(TreeNode root) {
         if (root == null) {
             return 0;
@@ -64,7 +64,7 @@ class Solution {
     }
 }
 
-class Solution {
+class Solution3 {
     public int countNodes(TreeNode root) {
         if (root == null) {
             return 0;
