@@ -7,7 +7,6 @@
 // @lc code=start
 class Solution {
     public int[][] generateMatrix(int n) {
-
         int loop = 0; // 控制循环次数
         int[][] res = new int[n][n];
         int start = 0; // 每次循环的开始点(start, start)
@@ -39,6 +38,41 @@ class Solution {
 
         if (n % 2 == 1) {
             res[start][start] = count;
+        }
+        return res;
+    }
+}
+
+class Solution2 {
+    public int[][] generateMatrix(int n) {
+        // 定义四条边
+        int left = 0;
+        int right = n - 1;
+        int top = 0;
+        int bottom = n - 1;
+
+        int[][] res = new int[n][n];
+
+        int num = 1;
+        int target = n * n;
+
+        while (num <= target) {
+            for (int i = left; i <= right; i++) {
+                res[top][i] = num++;
+            }
+            top++;
+            for (int i = top; i <= bottom; i++) {
+                res[i][right] = num++;
+            }
+            right--;
+            for (int i = right; i >= left; i--) {
+                res[bottom][i] = num++;
+            }
+            bottom--;
+            for (int i = bottom; i >= top; i--) {
+                res[i][left] = num++;
+            }
+            left++;
         }
         return res;
     }
