@@ -4,16 +4,6 @@
  * [209] 长度最小的子数组
  */
 
-// class Main209 {
-//     public static void main(String[] args) {
-//         int[] nums = { 1, 1, 1, 1, 1, 1, 1, 1 };
-//         int target = 11;
-//         Solution209 solution209 = new Solution209();
-//         int result = solution209.minSubArrayLen(target, nums);
-//         System.out.println("result=" + result);
-//     }
-// }
-
 // @lc code=start
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {

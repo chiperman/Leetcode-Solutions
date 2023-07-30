@@ -3,13 +3,6 @@
  *
  * [9] 回文数
  */
-// class Main9 {
-//     public static void main(String[] args) {
-//         Solution9 solution = new Solution9();
-//         int x = 10001;
-//         System.out.println(solution.isPalindrome(x));
-//     }
-// }
 
 // @lc code=start
 class Solution {
