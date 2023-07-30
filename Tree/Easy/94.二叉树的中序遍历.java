@@ -6,8 +6,6 @@
 
 // @lc code=start
 
-import java.util.List;
-
 /**
  * Definition for a binary tree node.
  * public class TreeNode {

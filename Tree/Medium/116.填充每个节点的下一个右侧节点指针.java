@@ -28,10 +28,6 @@ class Node {
 };
 */
 
-import java.util.Queue;
-
-import com.sun.org.apache.bcel.internal.classfile.Node;
-
 class Solution {
     public Node connect(Node root) {
         if (root == null) {
