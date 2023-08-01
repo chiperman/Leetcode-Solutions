@@ -23,31 +23,30 @@
  */
 class Solution {
     public int minDepth(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
+        Deque<TreeNode> deque = new LinkedList<>();
         if (root == null) {
             return 0;
         }
 
-        queue.offer(root);
+        deque.offer(root);
         int depth = 0;
 
-        while (!queue.isEmpty()) {
-            int size = queue.size();
+        while (!deque.isEmpty()) {
+            int size = deque.size();
             depth++;
-
-            TreeNode cur = queue.poll();
-
+            
             for (int i = 0; i < size; i++) {
+                TreeNode cur = deque.poll();
                 if (cur.left == null && cur.right == null) {
                     return depth;
                 }
 
                 if (cur.left != null) {
-                    queue.offer(cur.left);
+                    deque.offer(cur.left);
                 }
 
                 if (cur.right != null) {
-                    queue.offer(cur.right);
+                    deque.offer(cur.right);
                 }
             }
         }
