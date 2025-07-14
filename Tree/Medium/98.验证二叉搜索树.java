@@ -6,8 +6,6 @@
 
 // @lc code=start
 
-import algm.TreeNode;
-
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -24,29 +22,25 @@ import algm.TreeNode;
  * }
  */
 class Solution {
-
-    TreeNode max;
+    private long pre = Long.MIN_VALUE;
 
     public boolean isValidBST(TreeNode root) {
+        // 中序遍历
         if (root == null) {
             return true;
         }
 
-        boolean leftBoolean = isValidBST(root.left);
-        if (!leftBoolean) {
+        if (!isValidBST(root.left)) {
             return false;
         }
 
-        if (max != null && root.val <= max.val) {
+        if (root.val <= pre) {
             return false;
         }
 
-        max = root;
+        pre = root.val;
 
-        boolean rightBoolean = isValidBST(root.right);
-
-        return rightBoolean;
-
+        return isValidBST(root.right);
     }
 }
 // @lc code=end
